@@ -5,7 +5,7 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 
-mongoose.connect('mongodb://localhost:27017/cafe',  {useNewUrlParser: true, useUnifiedTopology: true}, (err, resp) => {
+mongoose.connect(process.env.URL_DB,  {useNewUrlParser: true, useUnifiedTopology: true}, (err, resp) => {
     if(err) throw err;
 
     console.log("Base de datos online")
